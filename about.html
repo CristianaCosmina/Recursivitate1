@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Recursivitate-Generalitati</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div class="header">
+		<div>
+			<a href="index.html" id="logo"><img src="images/output-onlinepngtools.png" alt="logo"></a>
+			<ul>
+				<li><a href="index.html">Argument</a></li>
+				<li class="selected"><a href="about.html">Generalitati</a></li>
+				<li><a href="blog.html">Exemple</a></li>
+				<!--<li><a href="menu.html">Menu</a></li>-->
+				<li><a href="contact.html">Probleme</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+		<div>
+			<h3>I.	Ce este recursivitatea?</h3>
+			<p>Recursivitatea este o tehnică de programare derivată din noțiunea matematică de recurență.
+				O noțiune este definită în mod recurent dacă în cadrul definiției apare chiar noțiunea respectivă. Cu alte cuvinte- Recursivitatea reprezintă proprietatea unei noțiuni de a se defini prin ea însăși.
+				<br>
+				 <b>Exemple</b><br>
+                <b> 1.Șirul lui Fibonacci</b>: Fn=Fn-1+Fn-2, n>2<br>
+			         F1=F2=1<br>
+                 <b>2. Factorialul unui număr</b>: n!=(n-1)!*n, n>0   0!=1<br>
+                     Ex 3!=1*2*3=6<br>
+                       5!=1*2*3*4*5=120 sau 5!=4!*5<br>
+În informatică conceptul de recursivitate se implementează (se folosește) cu ajutorul subprogramelor (funcțiilor) recursive. O funcție este recursiva dacă în corpul său apare o instrucțiune de autoapel.<br>
+
+
+                
+</p>
+			<h3>II.	Tipuri de recursivitate</h3>
+			<p>Dupa modul in care se realizeaza apelul<br>
+				•	<b>Directă</b> – funcția se autoapelează direct.<br>
+				•	<b>Indirectă</b> – funcția se autoapelează prin intermediul altei funcții.<br>
+				Dupa nr de apeluri efectuate intr-un apel:<br>
+				•	<b>Recursivitatea liniară</b> – un apel generează un singur autoapel.<br>
+				Ex: n!=(n-1)!*n (factorialul unui nr.)<br>
+				•	<b>Recursivitatea în cascadă</b> – un apel generează 2 sau mai multe autoapeluri<br>
+				Ex: Fibonacci<br>
+				
+				</p>
+			<h3>III.	Mecanismul recursivitatii. Utilizarea stivei</h3>
+			<p>Stiva este zona de memorie care funcționează pe principiul LIFO (last in first out).<br>
+				În stivă se salvează pentru fiecare apel al unei funcții :<br>
+				<b>•	Valorile parametrilor de intrare în funcție <br>
+					•	Adresele parametrilor de ieșire sau intrare-ieșire (&)<br>
+					•	Variabile locale din funcție<br></b>
+				În cazul funcțiilor recursive fiecare  autoapel generează un nou nivel în stivă, nivel pe care se memorează valorile menționate.<br>
+				Exemplu:  Suma cifrelor lui x<br>
+				int suma_cif (int x)  &nbsp;&nbsp;&nbsp;&nbsp;        <img src="images/snip6.PNG">          <br>   
+               { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;if(x<=9)<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;return x;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;return suma_cif(x/10)+x%10;<br>&nbsp;&nbsp;&nbsp;&nbsp; 
+              }<br>
+				</p>
+			<img src="images/stiva2.png">
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			<p>copyright &#169; footer | all rights reserved.</p>
+		</div>
+	</div>
+</body>
+</html>
